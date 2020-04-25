@@ -1,22 +1,66 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php $this->load->view('includes/header');?>
+<?php $this->load->view('includes/navigation');?>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <title>second hand store</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
-</html>
+<div class="container">
+<?php $this->load->view('includes/headersearch');?>
+    <div class="row">
+        <div class="card mt-4 col-md-8 mx-auto rounded-0">
+            <div class="card-body">
+                <h3 class="card-title text-muted">Categories</h3>
+                <hr>
+                <div class="row mx-auto">
+                    <div class="col-md-4">
+                        <div class="card mr-1 mt-2 bg-light">
+                            <div class="card-body text-center">
+                                <img src="<?php base_url();?>assets/uploads/computer.jpg" alt="" style="width:100%;height:140px" class="card-img img-fluid">
+                                <a href="#">Electronics</a>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-md-4">
+                        <div class="card mr-1 mt-2 bg-light">
+                            <div class="card-body text-center">
+                                <img src="<?php base_url();?>assets/uploads/camera.jpg" style="width:100%;height:140px" alt="" class="card-img-top img-fluid">
+                                <a href="#">Leisure</a>
+                            </div> 
+                        </div>
+                    </div>    
+                    <div class="col-md-4">    
+                        <div class="card mr-1 mt-2 bg-light">
+                            <div class="card-body text-center">
+                                <img src="<?php base_url();?>assets/uploads/job.jpg" style="width:100%;height:140px" alt="" class="card-img img-fluid">
+                                <a href="#">Jobs</a>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-md-4">     
+                        <div class="card mr-1 mt-2 bg-light">
+                            <div class="card-body text-center">
+                                <img src="<?php base_url();?>assets/uploads/animal.jpg" style="width:100%;height:140px" alt="" class="card-img img-fluid">
+                                <a href="#">Animals</a>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-md-4">     
+                        <div class="card mr-1 mt-2 bg-light">
+                            <div class="card-body text-center">
+                                <img src="<?php base_url();?>assets/uploads/house.jpg" style="width:100%;height:140px" alt="" class="card-img img-fluid">
+                                <a href="#">Houses</a>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="col-md-4"> 
+                        <div class="card mr-1 mt-2 bg-light">
+                            <div class="card-body text-center" >
+                                <img src="<?php base_url();?>assets/uploads/car.jpg" style="width:100%;height:140px"  alt="" class="card-img img-fluid">
+                                <a href="#">Vehicles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php $this->load->view('includes/sidebar');?>  
+    </div>
+</div>
+<?php $this->load->view('includes/footer');?>
