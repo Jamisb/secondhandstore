@@ -10,6 +10,6 @@
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
-    <title>Welcome to SHS</title>
+    <title>secndhand</title>
   </head>
   <body>
