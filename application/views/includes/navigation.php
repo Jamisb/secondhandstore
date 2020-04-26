@@ -8,19 +8,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#"> <i class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo site_url(''); ?>"> <i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-user-plus"></i>Sign up</a>
+        <a class="nav-link" href="<?php echo site_url('user/register'); ?>"><i class="fa fa-user-plus"></i> Sign up </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-sign-in-alt"></i>Login</a>
+        <a class="nav-link" href="<?php echo site_url('user/login'); ?>"><i class="fa fa-sign-in-alt"></i> Login </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-pencil-alt"></i>Sell something</a>
+        <a class="nav-link" href="<?php echo site_url('ads/add'); ?>"><i class="fa fa-pencil-alt"></i> Sell something </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-envelope"></i>Contact</a>
+        <a class="nav-link" href="<?php echo site_url('contact/send'); ?>"><i class="fa fa-envelope"></i> Contact </a>
       </li>
       <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
