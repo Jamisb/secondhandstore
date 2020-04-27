@@ -1,7 +1,7 @@
 <div class="jumbotron mt-5">
         <form action="#" class="form-inline mx-4" >
             <div class="form-group mr-3">
-                <input type="text" style="width:19em; text-align: center" placeholder="What are you looking for?" name="searchField" class="form-control">
+                <input type="text" style="width:19em; text-align: center" placeholder=" What are you looking for?" name="searchField" class="form-control">
             </div>
             <div class="form-group mr-3" >
                 <select name="cat" class="form-control" style="width:20em">

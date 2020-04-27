@@ -4,7 +4,7 @@
     <div class="row m-4">
         <div class="col-md-6 mx-auto m-4">
             <h4 class="card-heading text-default">Create a posting</h4>
-            <p class="card-heading text-default text-muted">Put something for sell! it's quick and easy!</p>
+            <p class="card-heading text-default text-muted">Put something for sell, it's quick and easy!</p>
             <!-- Login test on login page  -->
             <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
             <?php if($this->session->flashdata('fail'))
@@ -13,9 +13,9 @@
                 }
             ?>
             <!-- <div class="card bg-light"> -->
-                <form action="<?php echo site_url('ads/add')?>" method="post" class="pt-3" enctype="multipart/form-data">
+                <form action="#" method="post" class="pt-3" enctype="multipart/form-data">
                     <div class="form-group " >
-                        <label for="cat"> Chose Category: </label>
+                        <label for="cat"> Choose Category: </label>
                             <select name="category" class="form-control" >
                                 <option  selected disabled>Categories</option>
                                 <option value="Home and indoors">Home and fourniture</option>
@@ -27,7 +27,7 @@
                             </select>
                     </div> <!-- form-group// --> 
                     <div class="form-group ">
-                    <label for="region"> Chose region: </label>
+                    <label for="region"> Choose region: </label>
                         <select name="city" class="form-control" >
                             <option selected disabled>Region</option>
                             <option value="115" >Helsinki</option>
@@ -41,12 +41,15 @@
                             <option value="107" >Tornio</option>
                             <option value="120" >Pori</option>
                         </select>
-                    </div>
-                   
+                    </div><!-- form-group// --> 
                     <div class="form-group">
-                    <label for="body"> Item title: </label>
-                        <input name="title" type="text" class="form-control" placeholder="title">
+                    <label for="body"> Title: </label>
+                        <input name="title" type="text" class="form-control" placeholder="ex: Computer">
                     </div> <!-- form-group// --> 
+                    <div class="form-group">
+                    <label for="body"> Price: </label>
+                        <input name="price" type="text" class="form-control" placeholder="ex: 50€">
+                    </div> <!-- form-group// -->
                     <div class="form-group">
                         <label for="body"> Information about item: </label>
                         <textarea name="body" id="" cols="30" rows="10" class="form-control"></textarea>

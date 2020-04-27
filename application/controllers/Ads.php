@@ -18,7 +18,7 @@ class Ads extends CI_Controller {
 			$this->load->view('ads/add',$data);
 		}else{
 
-			$this->Ads_model->add_item();
+			$this->Ads_model->add_items();
 			$this->session->set_flashdata('success','Item added');
 			redirect(site_url());
 

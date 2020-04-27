@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Ads_model extends CI_Model {
-    public function add_item(){
+    public function add_items(){
         $image = $this->upload_image();
         if($image == "image_not_supported"){
             $this->session->set_flashdata('fail','File type is not supported');
@@ -13,7 +13,7 @@ class Ads_model extends CI_Model {
         }else{
             $data = array(
                 'user_id' => $this->session->userdata('user_id'),
-                'category' => $this->session->post('category'),
+                'category' => $this->input->post('category'),
                 'city' => $this->input->post('city'),
                 'title' => $this->input->post('title'),
                 'body' => $this->input->post('body'),
