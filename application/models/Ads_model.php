@@ -3,6 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Ads_model extends CI_Model {
     public function add_items(){
+        $date = new DateTime; 
+        $finnish_date = new DateTimeZone('Europe/Helsinki');
+        $date->setTimezone($finnish_date);
         $image = $this->upload_image();
         if($image == "image_not_supported"){
             $this->session->set_flashdata('fail','File type is not supported');
@@ -16,7 +19,9 @@ class Ads_model extends CI_Model {
                 'category' => $this->input->post('category'),
                 'city' => $this->input->post('city'),
                 'title' => $this->input->post('title'),
+                'price' => $this->input->post('price'),
                 'body' => $this->input->post('body'),
+                'created' => $date->format('Y-m-d H:i:s'),
                 'image' => $image
             );
             $this->db->insert('ads',$data);
