@@ -54,17 +54,26 @@ class User extends CI_Controller {
 
 				$id = $this->User_model->login_user($email,$password);
 				$user = $this->User_model->get_user_by_id($id);
-				$user_data = array(
+				$userdata = array(
 					'user_id' =>$user->id,
 					'email' =>$user->email,
 					'fname' =>$user->firstname,
 					'lname' =>$user->lastname,
 					'logged' =>true
 				);
-				$this->session->set_flashdata($user_data);
+				$this->session->set_userdata($userdata);
 				redirect(site_url());
 			}
 		}
-	// $this->load->view('users/login');
+	}
+	public function logout(){
+		$this->session->unset_userdata('user_id');
+		$this->session->unset_userdata('email');
+		$this->session->unset_userdata('fname');
+		$this->session->unset_userdata('lname');
+		$this->session->unset_userdata('logged');
+		redirect(site_url());
+
+
 	}
 }

@@ -36,6 +36,6 @@ class User_model extends CI_Model {
         $this->db->from('users');
         $this->db->where(array('id'=>$id));
         $results = $this->db->get();
-        return $results->num_rows(); 
+        return $results->row(); 
     }
 }

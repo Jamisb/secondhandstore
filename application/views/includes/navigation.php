@@ -10,12 +10,41 @@
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo site_url(''); ?>"> <i class="fa fa-home"></i> Home <span class="sr-only">(current)</span></a>
       </li>
+
+  <!-- Login test -->
+
+      <?php 
+            if(!$this->session->userdata('logged')):
+      ?>
+
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo site_url('user/register'); ?>"><i class="fa fa-user-plus"></i> Sign up </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo site_url('user/login'); ?>"><i class="fa fa-sign-in-alt"></i> Login </a>
+        </li>
+      <?php 
+        else:
+      ?>
+<!-- User logged print user infos -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('user/register'); ?>"><i class="fa fa-user-plus"></i> Sign up </a>
+        <a class="nav-link" href="<?php echo site_url('ads/add'); ?>"><i class="fa fa-user"></i> 
+          <?php 
+            echo $this->session->userdata('fname').' '. $this->session->userdata('lname');
+          ?> 
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo site_url('user/login'); ?>"><i class="fa fa-sign-in-alt"></i> Login </a>
+        <a class="nav-link" href="<?php echo site_url('user/logout'); ?>"><i class="fa fa-sign-out"></i> 
+          Logout 
+         </a>
       </li>
+
+      <?php 
+        endif;
+      
+      ?>
+
       <li class="nav-item">
         <a class="nav-link" href="<?php echo site_url('ads/add'); ?>"><i class="fa fa-pencil-alt"></i> Sell something </a>
       </li>

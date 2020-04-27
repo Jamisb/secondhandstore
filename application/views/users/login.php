@@ -5,8 +5,14 @@
         <div class="col-md-6 mx-auto m-4">
             <h4 class="card-heading text-default">Log In</h4>
             <p class="card-heading text-default text-muted">Sing into your account to sell your stuff!</p>
+            <!-- Login test on login page  -->
             <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
-<!-- Login form  -->
+            <?php if($this->session->flashdata('fail'))
+                {
+                    echo '<div class="alert alert-danger">'.$this->session->flashdata('fail').'</div>';
+                }
+            ?>
+                <!-- Login form  -->
                 <form action="<?php echo site_url('user/login')?>" method="post">
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
