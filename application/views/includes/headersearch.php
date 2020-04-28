@@ -1,7 +1,7 @@
 <div class="jumbotron mt-5">
         <form action="#" class="form-inline mx-4" >
             <div class="form-group mr-3">
-                <input type="text" style="width:19em; text-align: center" placeholder=" What are you looking for?" name="searchField" class="form-control">
+                <input type="text" style="width:19em; text-align: center" placeholder="What are you looking for?" name="searchField" class="form-control">
             </div>
             <div class="form-group mr-3" >
                 <select name="cat" class="form-control" style="width:20em">
@@ -15,18 +15,18 @@
                 </select>
             </div>
             <div class="form-group mr-3">
-                <select name="city" class="form-control" style="width:15em">
-                <option  selected disabled>Region</option>
-                    <option value="115" >Helsinki</option>
-                    <option value="115" >Tampere</option>
-                    <option value="114" >Oulu</option>
-                    <option value="106" >Jyväskylä</option>
-                    <option value="113" >Rovaniemi</option>
-                    <option value="103" >Kuusamo</option>
-                    <option value="117" >Espoo</option>
-                    <option value="104" >Vantaa</option>
-                    <option value="107" >Tornio</option>
-                    <option value="120" >Pori</option>
+                <select name="city" class="form-control" style="width:15em" >
+                    <option selected disabled>Region</option>
+                    <option value="helsinki" >Helsinki</option>
+                    <option value="tampere" >Tampere</option>
+                    <option value="oulu" >Oulu</option>
+                    <option value="jyväskylä" >Jyväskylä</option>
+                    <option value="rovaniemi" >Rovaniemi</option>
+                    <option value="kuusamo" >Kuusamo</option>
+                    <option value="espoo" >Espoo</option>
+                    <option value="vantaa" >Vantaa</option>
+                    <option value="tornio" >Tornio</option>
+                    <option value="pori" >Pori</option>
                 </select>
             </div>
             <div class="form-group">

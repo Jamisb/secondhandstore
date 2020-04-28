@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Ads_model extends CI_Model {
+    // Adding data to ads database function 
     public function add_items(){
         $date = new DateTime; 
         $finnish_date = new DateTimeZone('Europe/Helsinki');
@@ -29,6 +30,7 @@ class Ads_model extends CI_Model {
         }
 
     }
+    // Testing for immage requirement function 
     public function upload_image(){
         $target_dir="./assets/uploads/";
         $target_file = $target_dir.basename($_FILES['photo']['name']);
@@ -45,6 +47,11 @@ class Ads_model extends CI_Model {
             return $_FILES['photo']['name'];
         }
 
+    }
+    // Showing new posts on carousel function
+    public function get_post($limit,$start){
+
+        
     }
 
     
