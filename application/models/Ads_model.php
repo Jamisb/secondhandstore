@@ -9,10 +9,10 @@ class Ads_model extends CI_Model {
         $image = $this->upload_image();
         if($image == "image_not_supported"){
             $this->session->set_flashdata('fail','File type is not supported');
-			redirect(site_url().'ads/ad');
+			redirect(base_url().'ads/add');
         }elseif($image == "size_not_supported"){
             $this->session->set_flashdata('fail','File size is not supported');
-			redirect(site_url().'ads/ad');
+			redirect(base_url().'ads/add');
         }else{
             $data = array(
                 'user_id' => $this->session->userdata('user_id'),
@@ -33,7 +33,7 @@ class Ads_model extends CI_Model {
         $target_dir="./assets/uploads/";
         $target_file = $target_dir.basename($_FILES['photo']['name']);
         $file_type = pathinfo($target_file,PATHINFO_EXTENSION);
-        $allowed_files = array('png','jpg','jpeg');
+        $allowed_files = array('png','jpg','jpeg','JPG');
         if(empty($_FILES['photo']['size'])){
             return "camera.png";
         }elseif(!in_array($file_type,$allowed_files)){
