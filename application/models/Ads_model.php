@@ -30,28 +30,35 @@ class Ads_model extends CI_Model {
         }
 
     }
-    // Testing for immage requirement function 
+    // Testing and uploading immage requirement function 
     public function upload_image(){
-        $target_dir="./assets/uploads/";
-        $target_file = $target_dir.basename($_FILES['photo']['name']);
+        $target_dir = './assets/uploads';
+        $target_file = $target_dir.basename($_FILES["photo"]["name"]);
         $file_type = pathinfo($target_file,PATHINFO_EXTENSION);
         $allowed_files = array('png','jpg','jpeg','JPG');
-        if(empty($_FILES['photo']['size'])){
-            return "camera.png";
+        if(empty($_FILES["photo"]["size"])){
+            return "user.png";
         }elseif(!in_array($file_type,$allowed_files)){
             return "image_not_supported";
-        }else if ($_FILES['photo']['size'] > 2000000){
+        }else if ($_FILES["photo"]["size"] > 2000000){
             return "size_not_supported";
         }else{
-            move_uploaded_file($_FILES['photo']['tmp_name'],$target_file);
-            return $_FILES['photo']['name'];
+            $tmp_name = $_FILES["photo"]["tmp_name"];
+            $name = basename($_FILES["photo"]["name"]);
+            move_uploaded_file($tmp_name, "$target_dir/$name");
+            // move_uploaded_file($_FILES["photo"]["tmp_name"],"$target_file");
+            return $_FILES["photo"]["name"];
         }
 
     }
     // Showing new posts on carousel function
-    public function get_post($limit,$start){
-
-        
+    public function get_ads($limit,$start){
+        $this->db->select('*');
+        $this->db->from('ads');
+        $this->db->order_by('created','desc');
+        $this->db->limit($limit,$start);  
+        $ads = $this->db->get();
+        return $ads->result();
     }
 
     

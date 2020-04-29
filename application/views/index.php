@@ -14,8 +14,7 @@
                     <div class="col-md-4">
                         <div class="card mr-1 mt-2 bg-white">
                             <div class="card-body text-center">
-                                <img src="<?php base_url();?>assets/uploads/computer.jpg" alt="" style="width:100%;height:140px" class="card-img img-fluid">
-                                
+                                <img src="<?php base_url();?>assets/uploads/computer.jpg" alt="" style="width:100%;height:140px" class="card-img img-fluid">   
                             </div>
                             <div class="text-center mb-4">
                                 <a href="#">Electronics</a>
@@ -89,58 +88,35 @@
         <div class="carousel-inner">
             <div class="carousel-item active pb-4">
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="card bg-light">
-                            <div class="card-body text-center">
-                                <img src="<?php base_url();?>assets/uploads/animal.jpg" style="width:100%;height:140px" alt="" class="card-img img-fluid">
-                                <a href="#">Animals</a>
+                    <!-- Loop through whole ads  -->
+                    <?foreach ($first_ad as $ad):?>
+                        <div class="col-md-4">
+                            <div class="card bg-light">
+                                <div class="card-body text-center">
+                                    <img src="<?php base_url();?>assets/uploads/<? echo $ad->image;?>" style="width:100%;height:140px" alt="" class="card-img img-fluid">
+                                    <a class="text-secondary" href="#"><? echo $ad->title;?></a>
+                                    <h6 class="text-dark"><? echo $ad->city;?></h6>
+                                    <p class="text-dark"><? echo substr($ad->body,0,50);?></p>
+                                </div>
                             </div>
-                        </div>
-                    </div>    
-                    <div class="col-md-4">
-                        <div class="card bg-light">
-                            <div class="card-body text-center">
-                                <img src="<?php base_url();?>assets/uploads/house.jpg" style="width:100%;height:140px" alt="" class="card-img img-fluid">
-                                <a href="#">Houses</a>
-                            </div>
-                        </div>
-                    </div>    
-                    <div class="col-md-4">
-                        <div class="card bg-light">
-                            <div class="card-body text-center">
-                                <img src="<?php base_url();?>assets/uploads/camera.jpg" style="width:100%;height:140px" alt="" class="card-img img-fluid">
-                                <a href="#">Multimedia</a>
-                            </div>
-                        </div>
-                    </div>
+                        </div>    
+                    <?endforeach;?>
                 </div>
             </div>
             <div class="carousel-item pb-4">
                 <div class="row">
+                    <?foreach ($second_ad as $ad):?>
                         <div class="col-md-4">
                             <div class="card bg-light">
                                 <div class="card-body text-center">
-                                    <img src="<?php base_url();?>assets/uploads/computer.jpg" style="width:100%;height:140px" alt="" class="card-img img-fluid">
-                                    <a href="#">Computers</a>
+                                    <img src="<?php base_url();?>assets/uploads/<? echo $ad->image;?>" style="width:100%;height:140px" alt="" class="card-img img-fluid">
+                                    <a href="#"><? echo $ad->title;?></a>
+                                    <h6 class="text-dark"><? echo $ad->city;?></h6>
+                                    <p class="text-dark"><? echo substr($ad->body,0,50);?></p>
                                 </div>
                             </div>
                         </div>    
-                        <div class="col-md-4">
-                            <div class="card bg-light">
-                                <div class="card-body text-center">
-                                    <img src="<?php base_url();?>assets/uploads/job.jpg" style="width:100%;height:140px" alt="" class="card-img img-fluid">
-                                    <a href="#">Jobs</a>
-                                </div>
-                            </div>
-                        </div>    
-                        <div class="col-md-4">
-                            <div class="card mr-1 bg-light">
-                                <div class="card-body text-center">
-                                    <img src="<?php base_url();?>assets/uploads/car.jpg" style="width:100%;height:140px" alt="" class="card-img img-fluid">
-                                    <a href="#">Vehicles</a>
-                                </div>
-                            </div>
-                        </div>
+                    <?endforeach;?>  
                 </div>
             </div> 
         </div>
