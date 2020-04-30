@@ -26,4 +26,14 @@ class Ads extends CI_Controller {
 		}
 	}
 
+	public function offer(){
+		$id = $this->uri->segment(3);
+		// $this->load->view('ads/offer');
+		$data['offer'] = $this->Ads_model->get_offer_info($id);
+		if(empty($data['offer'])){
+			redirect(site_url());
+		}
+		$this->load->view('ads/offer',$data);
+	}
+
 }

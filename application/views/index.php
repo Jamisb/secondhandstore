@@ -5,70 +5,52 @@
                                         <!-- Header search bar  -->
 <?php $this->load->view('includes/headersearch');?>
 
-    <div class="row mb-4">
-        <div class="card mt-4 col-md-8 mx-auto rounded-0">
+
+                                        <!-- Categories card  -->
+    <div class="row my-5 mx-auto">
+        <div class="card col-md-8 mx-auto rounded shadow-sm bg-white">
             <div class="card-body">
-                <h3 class="card-title text-muted">Categories</h3>
-                <hr>
-                <div class="row mx-auto">
-                    <div class="col-md-4">
-                        <div class="card mr-1 mt-2 bg-white">
-                            <div class="card-body text-center">
-                                <img src="<?php base_url();?>assets/uploads/computer.jpg" alt="" style="width:100%;height:140px" class="card-img img-fluid">   
-                            </div>
-                            <div class="text-center mb-4">
-                                <a href="#">Electronics</a>
-                            </div> 
+                <h3 class="card-title text-secondary">Categories</h3>
+                <hr class="border-black-50">
+                <!-- <div class="row mx-auto"> -->
+                <div class="card-deck">
+                    <div class="card border-light">
+                        <img src="<?php echo base_url();?>assets/uploads/computer.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <a href="#"><h5 class="card-title text-success text-center">Electronics</h5></a>
                         </div>
-                    </div>    
-                    <div class="col-md-4">
-                        <div class="card mr-1 mt-2 bg-white">
-                            <div class="card-body text-center">
-                                <img src="<?php base_url();?>assets/uploads/camera.jpg" style="width:100%;height:140px" alt="" class="card-img-top img-fluid">
-                            </div> 
-                            <div class="text-center mb-4">
-                                <a href="#">Leisure</a>
-                            </div>
+                    </div>
+                    <div class="card border-light">
+                        <img src="<?php echo base_url();?>assets/uploads/cam.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <a href="#"><h5 class="card-title text-success text-center">Leisure</h5></a>
                         </div>
-                    </div>    
-                    <div class="col-md-4">    
-                        <div class="card mr-1 mt-2 bg-white">
-                            <div class="card-body text-center">
-                                <img src="<?php base_url();?>assets/uploads/job.jpg" style="width:100%;height:140px" alt="" class="card-img img-fluid">
-                            </div>
-                            <div class="text-center mb-4">
-                                <a href="#">Jobs</a>
-                            </div>
+                    </div>
+                    <div class="card border-light">
+                        <img src="<?php echo base_url();?>assets/uploads/job.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <a href="#"><h5 class="card-title text-success text-center">Jobs</h5></a>
                         </div>
-                    </div>    
-                    <div class="col-md-4">     
-                        <div class="card mr-1 mt-2 bg-white">
-                            <div class="card-body text-center">
-                                <img src="<?php base_url();?>assets/uploads/animal.jpg" style="width:100%;height:140px" alt="" class="card-img img-fluid">
-                            </div>
-                            <div class="text-center mb-4">
-                                <a href="#">Animals</a>
-                            </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card-deck">
+                    <div class="card border-light">
+                        <img src="<?php echo base_url();?>assets/uploads/puppy.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <a href="#"><h5 class="card-title text-success text-center">Animals</h5></a>
                         </div>
-                    </div>    
-                    <div class="col-md-4">     
-                        <div class="card mr-1 mt-2 bg-white">
-                            <div class="card-body text-center">
-                                <img src="<?php base_url();?>assets/uploads/house.jpg" style="width:100%;height:140px" alt="" class="card-img img-fluid">
-                            </div>
-                            <div class="text-center mb-4">
-                                <a href="#">Houses</a>
-                            </div>
+                    </div>
+                    <div class="card border-light">
+                        <img src="<?php echo base_url();?>assets/uploads/home.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <a href="#"><h5 class="card-title text-success text-center">Houses</h5></a>
                         </div>
-                    </div>    
-                    <div class="col-md-4"> 
-                        <div class="card mr-1 mt-2 bg-white">
-                            <div class="card-body text-center" >
-                                <img src="<?php base_url();?>assets/uploads/car.jpg" style="width:100%;height:140px"  alt="" class="card-img img-fluid">
-                            </div>
-                            <div class="text-center mb-4">
-                                <a href="#">Vehicles</a>
-                            </div>
+                    </div>
+                    <div class="card border-light">
+                        <img src="<?php echo base_url();?>assets/uploads/car2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <a href="#"><h5 class="card-title text-success text-center">Vehicles</h5></a>
                         </div>
                     </div>
                 </div>
@@ -76,27 +58,53 @@
         </div>
                                                 <!-- SIDEBAR -->
         <?php $this->load->view('includes/sidebar');?>  
+                                                <!-- Latest offers 2 -->
+                                              
+        <div class="card-body mt-4">
+            <div class=" text-success text-center"> 
+                <h3>Latest offers</h3>
+            </div>
+            <hr>
+            <div class="card-columns">
+                <?foreach ($all_ad as $ad):?>
+                    <div class="card shadow-sm">
+                        <a href="<?php base_url();?>ads/offer/<?php echo $ad->id;?>"><img src="<?php echo base_url();?>assets/uploads/<?php echo $ad->image;?>" class="card-img-top" alt="..."></a>
+                        <div class="card-body p-0">
+                            <div class="m-3">
+                            <a class="text-secondary" href="<?php base_url();?>ads/offer/<?php echo $ad->id;?>"><h5 class="card-title"><?php echo $ad->title;?></h5></a>
+                            <h5 class="text-success"><?php echo $ad->price;?>€</h5>
+                            <h6 class="text-success"><?php echo $ad->city;?></h6>
+                            <p class="text-muted"><?php echo substr($ad->body,0,50);?></p>
+                            <p class="card-text"><small class="text-muted"><?php echo $ad->created_item ;?></small></p>
+                            </div>
+                        </div>
+                    </div> 
+                <?endforeach;?>
+            </div>
+        </div>
     </div>   
-    <div class=" text-muted text-center"> 
-        <h3>Latest offers</h3>
-    </div>
-    <hr>
 
                                                 <!-- CAROUSSEL -->
+    <div class=" text-success text-center"> 
+        <h3>Top categories</h3>
+    </div>
+    <hr>
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active pb-4">
-                <div class="row">
+                <div class="card-deck">
+
                     <!-- Loop through whole ads  -->
+                    
                     <?foreach ($first_ad as $ad):?>
                         <div class="col-md-4">
-                            <div class="card bg-light">
-                                <div class="card-body text-center">
-                                    <img src="<?php base_url();?>assets/uploads/<? echo $ad->image;?>" style="width:100%;height:140px" alt="" class="card-img img-fluid">
-                                    <a class="text-secondary" href="#"><? echo $ad->title;?></a>
-                                    <h6 class="text-dark"><? echo $ad->city;?></h6>
-                                    <p class="text-dark"><? echo substr($ad->body,0,50);?></p>
+                            <div class="card border-0">
+                                <img class="card-img-top" src="<?php echo base_url();?>assets/uploads/<?php echo $ad->image;?>">
+                                <div class="card-body">
+                                    <a class="text-secondary text-success" href="<?php base_url();?>ads/offer/<?php echo $ad->id;?>"><?php echo $ad->title;?></a>
+                                    <h6 class="text-secondary"><?php echo $ad->city;?></h6>
+                                    <p class="text-muted"><?php echo substr($ad->body,0,50);?></p>
                                 </div>
                             </div>
                         </div>    
@@ -107,12 +115,12 @@
                 <div class="row">
                     <?foreach ($second_ad as $ad):?>
                         <div class="col-md-4">
-                            <div class="card bg-light">
-                                <div class="card-body text-center">
-                                    <img src="<?php base_url();?>assets/uploads/<? echo $ad->image;?>" style="width:100%;height:140px" alt="" class="card-img img-fluid">
-                                    <a href="#"><? echo $ad->title;?></a>
-                                    <h6 class="text-dark"><? echo $ad->city;?></h6>
-                                    <p class="text-dark"><? echo substr($ad->body,0,50);?></p>
+                            <div class="card border-0">
+                                <img class="card-img-top" src="<?php echo base_url();?>assets/uploads/<?php echo $ad->image;?>">
+                                <div class="card-body">
+                                    <a class="text-secondary text-success" href="<?php base_url();?>ads/offer/<?php echo $ad->id;?>"><?php echo $ad->title;?></a>
+                                    <h6 class="text-secondary"><?php echo $ad->city;?></h6>
+                                    <p class="text-muted"><?php echo substr($ad->body,0,50);?></p>
                                 </div>
                             </div>
                         </div>    
@@ -125,7 +133,7 @@
             <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon"  aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
     </div>

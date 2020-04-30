@@ -22,7 +22,7 @@ class Ads_model extends CI_Model {
                 'title' => $this->input->post('title'),
                 'price' => $this->input->post('price'),
                 'body' => $this->input->post('body'),
-                'created' => $date->format('Y-m-d H:i:s'),
+                'created_item' => $date->format('Y-m-d H:i:s'),
                 'image' => $image
             );
             $this->db->insert('ads',$data);
@@ -55,11 +55,18 @@ class Ads_model extends CI_Model {
     public function get_ads($limit,$start){
         $this->db->select('*');
         $this->db->from('ads');
-        $this->db->order_by('created','desc');
+        $this->db->order_by('created_item','desc');
         $this->db->limit($limit,$start);  
         $ads = $this->db->get();
         return $ads->result();
     }
-
-    
+// Getting offer details from ads table and user detail from user table using joints
+    public function get_offer_info($id){
+        $this->db->select('a.*,u.*');
+        $this->db->from('ads as a');
+        $this->db->join('users as u','u.id = a.user_id');
+        $this->db->where(array('a.id'=>$id));  
+        $offer = $this->db->get();
+        return $offer->row();
+    }
 }

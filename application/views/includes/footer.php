@@ -1,5 +1,5 @@
-<footer class="bg-dark text-white py-2 mt-4 mb-0 text-center">
-  <p class="lead mt-2">secndhand.com &copy;2020</p>
+<footer class="bg-success text-white py-2 mt-4 mb-0 text-center">
+  <p class="lead mt-2">secndhand.com &copy;Misbah Abdeljalil 2020</p>
 </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
