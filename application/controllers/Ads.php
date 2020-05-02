@@ -33,6 +33,8 @@ class Ads extends CI_Controller {
 		if(empty($data['offer'])){
 			redirect(site_url());
 		}
+		$data['next']= $this->Ads_model->get_next_ad(1,$id);
+		$data['previous']= $this->Ads_model->get_previous_ad(1,$id);
 		$this->load->view('ads/offer',$data);
 	}
 

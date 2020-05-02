@@ -69,4 +69,26 @@ class Ads_model extends CI_Model {
         $offer = $this->db->get();
         return $offer->row();
     }
+    public function get_next_ad($limit,$start){
+        $this->db->where('id >',$start);
+        $this->db->limit($limit);
+        $offer = $this->db->get('ads');
+        if ($offer->num_rows() > 0){
+            $row = $offer->row();
+            return $row;
+        }else{
+            return false;
+        }
+    }
+    public function get_previous_ad($limit,$start){
+        $this->db->where('id',$start-1);
+        $this->db->limit($limit);
+        $offer = $this->db->get('ads');
+        if ($offer->num_rows() > 0){
+            $row = $offer->row();
+            return $row;
+        }else{
+            return false;
+        }
+    }
 }

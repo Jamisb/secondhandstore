@@ -14,15 +14,15 @@
                 <div>
                     <img src="<?php echo base_url();?>assets/uploads/<?php echo $offer->image;?>" class="card-img img-fluid rounded-0"> 
 
-
                     <div class="float-right" style="position:absolute ; right:20px; top:35%">
-                        <button type="button" class="btn"><i class="fas fa-chevron-right" style="font-size: 2em; color: white;"></i></button>
+                        <a href="<?php echo ($next != false) ? base_url().'ads/offer/'.$next->id : "#";?>" class="btn" role="button"><i class="fas fa-chevron-right" style="font-size: 2em; color: white;"></i></a>
                     </div>
 
                     <div class="float-left" style="position:absolute ; left:20px; top:35%">
-                        <button type="button" class="btn"><i class="fas fa-chevron-left" style="font-size: 2em; color: white;"></i></button>
+                        <a href="<?php echo ($previous != false) ? base_url().'ads/offer/'.$previous->id : "#";?>" class="btn" role="button"><i class="fas fa-chevron-left" style="font-size: 2em; color: white;"></i></a>
                     </div>
-                </div>              
+                </div> 
+
                 <div class="card m-3 border-0">
                     <h3 class="text-success"><?php echo $offer->title;?></h3>
                     <h5 class="text-secondary"><?php echo $offer->price;?>€</h5>
