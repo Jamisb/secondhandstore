@@ -37,5 +37,11 @@ class Ads extends CI_Controller {
 		$data['previous']= $this->Ads_model->get_previous_ad(1,$id);
 		$this->load->view('ads/offer',$data);
 	}
+	public function category(){
+
+		$data['offers']= $this->Ads_model->get_offers_by_category($this->uri->segment(3));
+		$this->load->view('ads/categories' , $data);
+
+	}
 
 }

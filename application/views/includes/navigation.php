@@ -1,26 +1,28 @@
 <!-- NAV BAR -->
 <nav class="navbar shadow-sm navbar-expand-md navbar-light bg-white sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="<?php echo site_url(''); ?>"><img src="<?php echo site_url(''); ?>assets/uploads/logo1.png"></a>
+  
+    <a class="navbar-brand ml-5" href="<?php echo site_url(''); ?>"><img src="<?php echo site_url(''); ?>assets/uploads/logo1.png"></a>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <div class="collapse navbar-collapse mr-5" id="navbarsExampleDefault">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+        <!-- <li class="nav-item active">
           <a class="nav-link" href="<?php echo site_url(''); ?>">  Home <span class="sr-only">(current)</span></a>
-        </li>
+        </li> -->
 
     <!-- Login test -->
 
         <?php 
               if(!$this->session->userdata('logged')):
         ?>
-          <li class="nav-item dropdown">
-            <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Log In</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="nav-link" href="<?php echo site_url('user/login'); ?>"> Log In </a>
+
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login/Register</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="nav-link" href="<?php echo site_url('user/register'); ?>"> Register </a>
             <a class="nav-link" href="<?php echo site_url('user/login'); ?>"> Log In </a>
-            </div>
-        </li>
+          </div>
+        </li> -->
         <?php 
           else:
         ?>
@@ -42,10 +44,10 @@
         ?>
 
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo site_url('ads/add'); ?>"> Sell something </a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="<?php echo site_url('contact/send'); ?>"> Contact </a>
+        </li>
+        <li class="nav-item ml-2">
+          <a class="btn btn-outline-success my-2 my-sm-0" href="<?php echo site_url('ads/add'); ?>">Post an ad</a>
         </li>
 
         
@@ -58,5 +60,5 @@
         <button class="btn btn-inline-secondary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
       </form> -->
     </div>
-  </div>
+
 </nav>

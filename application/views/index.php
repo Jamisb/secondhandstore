@@ -17,19 +17,19 @@
                     <div class="card border-light">
                         <img src="<?php echo base_url();?>assets/uploads/computer.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                        <a href="#"><h5 class="card-title text-success text-center">Electronics</h5></a>
+                        <a href="<?php echo base_url();?>ads/category/Electronics"><h5 class="card-title text-success text-center">Electronics</h5></a>
                         </div>
                     </div>
                     <div class="card border-light">
                         <img src="<?php echo base_url();?>assets/uploads/cam.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                        <a href="#"><h5 class="card-title text-success text-center">Leisure</h5></a>
+                        <a href="<?php echo base_url();?>ads/category/Leisure"><h5 class="card-title text-success text-center">Leisure</h5></a>
                         </div>
                     </div>
                     <div class="card border-light">
                         <img src="<?php echo base_url();?>assets/uploads/job.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                        <a href="#"><h5 class="card-title text-success text-center">Jobs</h5></a>
+                        <a href="<?php echo base_url();?>ads/category/Jobs"><h5 class="card-title text-success text-center">Jobs</h5></a>
                         </div>
                     </div>
                 </div>
@@ -38,19 +38,19 @@
                     <div class="card border-light">
                         <img src="<?php echo base_url();?>assets/uploads/puppy.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                        <a href="#"><h5 class="card-title text-success text-center">Animals</h5></a>
+                        <a href="<?php echo base_url();?>ads/category/Animals"><h5 class="card-title text-success text-center">Animals</h5></a>
                         </div>
                     </div>
                     <div class="card border-light">
                         <img src="<?php echo base_url();?>assets/uploads/home.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                        <a href="#"><h5 class="card-title text-success text-center">Houses</h5></a>
+                        <a href="<?php echo base_url();?>ads/category/Home_and_indoors"><h5 class="card-title text-success text-center">Home and indoors</h5></a>
                         </div>
                     </div>
                     <div class="card border-light">
                         <img src="<?php echo base_url();?>assets/uploads/car2.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                        <a href="#"><h5 class="card-title text-success text-center">Vehicles</h5></a>
+                        <a href="<?php echo base_url();?>ads/category/Vehicles"><h5 class="card-title text-success text-center">Vehicles</h5></a>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
         </div>
                                                 <!-- SIDEBAR -->
         <?php $this->load->view('includes/sidebar');?>  
-                                                <!-- Latest offers 2 -->
+                                                <!-- Latest offers -->
                                               
         <div class="card-body mt-4">
             <div class=" text-success text-center"> 
@@ -94,8 +94,6 @@
         <div class="carousel-inner">
             <div class="carousel-item active pb-4">
                 <div class="card-deck">
-
-                    <!-- Loop through whole ads  -->
                     
                     <?foreach ($first_ad as $ad):?>
                         <div class="col-md-4">

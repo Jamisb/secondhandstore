@@ -69,6 +69,7 @@ class Ads_model extends CI_Model {
         $offer = $this->db->get();
         return $offer->row();
     }
+// Getting Next and previous offers
     public function get_next_ad($limit,$start){
         $this->db->where('id >',$start);
         $this->db->limit($limit);
@@ -90,5 +91,13 @@ class Ads_model extends CI_Model {
         }else{
             return false;
         }
+    }
+// Listing offers by category
+    public function get_offers_by_category($category){
+        $this->db->select('*');
+        $this->db->from('ads');
+        $this->db->where(array('category'=>$category));  
+        $offers = $this->db->get();
+        return $offers->result();
     }
 }
