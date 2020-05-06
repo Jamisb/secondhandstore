@@ -15,43 +15,56 @@
                 <!-- <div class="row mx-auto"> -->
                 <div class="card-deck">
                     <div class="card border-light">
-                        <img src="<?php echo base_url();?>assets/uploads/computer.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <a href="<?php echo base_url();?>ads/category/Electronics"><h5 class="card-title text-success text-center">Electronics</h5></a>
-                        </div>
+                        <a style="text-decoration:none" href="<?php echo base_url();?>ads/category/computers-software">
+                            <img src="<?php echo base_url();?>assets/uploads/computer.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h6 class="text-success text-center">Computers & Software</h6>
+                            </div>
+                        </a>
+
                     </div>
                     <div class="card border-light">
-                        <img src="<?php echo base_url();?>assets/uploads/cam.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <a href="<?php echo base_url();?>ads/category/Leisure"><h5 class="card-title text-success text-center">Leisure</h5></a>
-                        </div>
+                        <a style="text-decoration:none" href="<?php echo base_url();?>ads/category/instruments-multimedia">
+                            <img src="<?php echo base_url();?>assets/uploads/cam.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title text-success text-center">Instruments & Multimedia</h6>
+                            </div>
+                        </a>
                     </div>
                     <div class="card border-light">
-                        <img src="<?php echo base_url();?>assets/uploads/job.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <a href="<?php echo base_url();?>ads/category/Jobs"><h5 class="card-title text-success text-center">Jobs</h5></a>
-                        </div>
+                        <a style="text-decoration:none" href="<?php echo base_url();?>ads/category/jobs-trainings">
+                            <img src="<?php echo base_url();?>assets/uploads/job.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h6 class="card-title text-success text-center">Jobs & Trainings</h6>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <br>
                 <div class="card-deck">
                     <div class="card border-light">
-                        <img src="<?php echo base_url();?>assets/uploads/puppy.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <a href="<?php echo base_url();?>ads/category/Animals"><h5 class="card-title text-success text-center">Animals</h5></a>
-                        </div>
+                        <a style="text-decoration:none" href="<?php echo base_url();?>ads/category/pets">
+                            <img src="<?php echo base_url();?>assets/uploads/puppy.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h6 class="card-title text-success text-center">Pets</h6>
+                            </div>
+                        </a>
                     </div>
                     <div class="card border-light">
-                        <img src="<?php echo base_url();?>assets/uploads/home.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <a href="<?php echo base_url();?>ads/category/Home_and_indoors"><h5 class="card-title text-success text-center">Home and indoors</h5></a>
-                        </div>
+                        <a style="text-decoration:none" href="<?php echo base_url();?>ads/category/home-garden">
+                            <img src="<?php echo base_url();?>assets/uploads/home.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h6 class="card-title text-success text-center">Home & Garden</h6>
+                            </div>
+                        </a>
                     </div>
                     <div class="card border-light">
-                        <img src="<?php echo base_url();?>assets/uploads/car2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <a href="<?php echo base_url();?>ads/category/Vehicles"><h5 class="card-title text-success text-center">Vehicles</h5></a>
-                        </div>
+                        <a style="text-decoration:none" href="<?php echo base_url();?>ads/category/cars-vehicles">
+                            <img src="<?php echo base_url();?>assets/uploads/car2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h6 class="card-title text-success text-center">Cars & Vehicles</h6>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -68,10 +81,10 @@
             <div class="card-columns">
                 <?foreach ($all_ad as $ad):?>
                     <div class="card shadow-sm">
-                        <a href="<?php base_url();?>ads/offer/<?php echo $ad->id;?>"><img src="<?php echo base_url();?>assets/uploads/<?php echo $ad->image;?>" class="card-img-top" alt="..."></a>
+                        <a style="text-decoration:none" href="<?php base_url();?>ads/offer/<?php echo $ad->id;?>"><img src="<?php echo base_url();?>assets/uploads/<?php echo $ad->image;?>" class="card-img-top" alt="..."></a>
                         <div class="card-body p-0">
                             <div class="m-3">
-                            <a class="text-secondary" href="<?php base_url();?>ads/offer/<?php echo $ad->id;?>"><h5 class="card-title"><?php echo $ad->title;?></h5></a>
+                            <a class="text-secondary" style="text-decoration:none" href="<?php base_url();?>ads/offer/<?php echo $ad->id;?>"><h5 class="card-title"><?php echo $ad->title;?></h5></a>
                             <h5 class="text-success"><?php echo $ad->price;?>€</h5>
                             <h6 class="text-success"><?php echo $ad->city;?></h6>
                             <p class="text-muted"><?php echo substr($ad->body,0,50);?></p>
@@ -100,7 +113,7 @@
                             <div class="card border-0">
                                 <img class="card-img-top" src="<?php echo base_url();?>assets/uploads/<?php echo $ad->image;?>">
                                 <div class="card-body">
-                                    <a class="text-secondary text-success" href="<?php base_url();?>ads/offer/<?php echo $ad->id;?>"><?php echo $ad->title;?></a>
+                                    <a class="text-secondary text-success" style="text-decoration:none" href="<?php base_url();?>ads/offer/<?php echo $ad->id;?>"><?php echo $ad->title;?></a>
                                     <h6 class="text-secondary"><?php echo $ad->city;?></h6>
                                     <p class="text-muted"><?php echo substr($ad->body,0,50);?></p>
                                 </div>
@@ -116,7 +129,7 @@
                             <div class="card border-0">
                                 <img class="card-img-top" src="<?php echo base_url();?>assets/uploads/<?php echo $ad->image;?>">
                                 <div class="card-body">
-                                    <a class="text-secondary text-success" href="<?php base_url();?>ads/offer/<?php echo $ad->id;?>"><?php echo $ad->title;?></a>
+                                    <a class="text-secondary text-success" style="text-decoration:none" href="<?php base_url();?>ads/offer/<?php echo $ad->id;?>"><?php echo $ad->title;?></a>
                                     <h6 class="text-secondary"><?php echo $ad->city;?></h6>
                                     <p class="text-muted"><?php echo substr($ad->body,0,50);?></p>
                                 </div>

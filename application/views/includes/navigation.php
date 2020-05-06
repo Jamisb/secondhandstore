@@ -15,14 +15,6 @@
               if(!$this->session->userdata('logged')):
         ?>
             <a class="nav-link" href="<?php echo site_url('user/login'); ?>"> Log In </a>
-
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login/Register</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="nav-link" href="<?php echo site_url('user/register'); ?>"> Register </a>
-            <a class="nav-link" href="<?php echo site_url('user/login'); ?>"> Log In </a>
-          </div>
-        </li> -->
         <?php 
           else:
         ?>
@@ -46,10 +38,11 @@
         <li class="nav-item">
           <a class="nav-link" href="<?php echo site_url('contact/send'); ?>"> Contact </a>
         </li>
-        <li class="nav-item ml-2">
-          <a class="btn btn-outline-success my-2 my-sm-0" href="<?php echo site_url('ads/add'); ?>">Post an ad</a>
-        </li>
 
+        <li class="nav-item ml-2">
+          <a class="btn btn-outline-success my-2 my-sm-0" href="<?php if(!$this->session->userdata('logged')): echo site_url('user/login'); else: echo site_url('ads/add'); endif; ?>">Post an ad</a>
+        </li>
+        
         
         <!-- <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

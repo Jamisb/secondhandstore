@@ -10,15 +10,16 @@
     <div class="row my-5 mx-auto">
         <div class="card col-md-10 mx-left rounded shadow-sm bg-white">
             <div class="card-body">
-                <h3 class="card-title text-secondary"><?php echo $this->uri->segment(3);?></h3>
+                <h3 class="card-title text-success"><?php echo count($offers);?> ads: <?php echo $this->uri->segment(3);?></h3>
                 <hr class="border-black-50">
                 <!-- <div class="row mx-auto"> -->
                 <?foreach ($offers as $offer):?>
+                <a class="text-secondary" style="text-decoration:none;" href="<?php base_url();?>/secondhandstore/ads/offer/<?php echo $offer->id;?>">
                 <div class="card-deck">
                     <div class="card mb-3 shadow-sm" style="max-width: 100%;">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                            <img class="card-img" style="object-fit:cover ;object-position: center;width: 200px;height: 200px;" src="<?php echo base_url();?>assets/uploads/<?php echo $offer->image;?>"  alt="...">
+                            <img class="card-img" style="object-fit:cover ;object-position: center;width: 200px;height: 200px;" src="<?php echo base_url();?>assets/uploads/<?php echo $offer->image;?>" alt="...">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -32,6 +33,8 @@
                         </div>
                     </div>
                 </div>
+                </a>
+
                 <?endforeach;?>
                 
                 <!-- <div class="card-deck">

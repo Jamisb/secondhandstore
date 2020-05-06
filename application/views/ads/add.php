@@ -3,8 +3,8 @@
 <div class="container">
     <div class="row m-4">
         <div class="col-md-6 mx-auto m-4">
-            <h4 class="card-heading text-default">Create a posting</h4>
-            <p class="card-heading text-default text-muted">Put something for sell, it's quick and easy!</p>
+            <h4 class="card-heading text-success">Create a posting</h4>
+            <h6 class="card-heading text-default text-muted">Put something for sell, it's quick and easy!</h6>
             <!-- Login test on login page  -->
             <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
             <?php if($this->session->flashdata('fail'))
@@ -18,12 +18,12 @@
                         <label for="cat"> Choose Category: </label>
                             <select name="category" class="form-control" >
                                 <option  selected disabled>Categories</option>
-                                <option value="Home and indoors">Home and fourniture</option>
-                                <option value="Electronics">Computers and electronics</option>
-                                <option value="Leisure">Leisure and hobbies </option>
-                                <option value="Animals and garden">Pets and garden</option>
-                                <option value="Vehicles">Vehicles</option>
-                                <option value="Jobs">Jobs and trainings</option>
+                                <option value="home-garden">Home & Garden</option>
+                                <option value="computers-software">Computers & Software</option>
+                                <option value="instruments-multimedia">Instruments & Multimedia </option>
+                                <option value="pets">Pets</option>
+                                <option value="cars-vehicles">Cars & Vehicles</option>
+                                <option value="jobs-trainings">Jobs & Trainings</option>
                             </select>
                     </div> <!-- form-group// --> 
                     <div class="form-group ">
