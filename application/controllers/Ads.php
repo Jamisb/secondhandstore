@@ -40,7 +40,26 @@ class Ads extends CI_Controller {
 	public function category(){
 
 		$data['offers']= $this->Ads_model->get_offers_by_category($this->uri->segment(3));
+		if(empty($data['offers'])){
+			redirect(site_url());
+		}
 		$this->load->view('ads/categories' , $data);
+
+	}
+	public function city(){
+
+		$data['offers']= $this->Ads_model->get_offers_by_city($this->uri->segment(3));
+		if(empty($data['offers'])){
+			redirect(site_url());
+		}
+		$this->load->view('ads/cities' , $data);
+	}
+	public function find (){
+		$term = $this->input->post('searchField');
+		$category = $this->input->post('header_category');
+		$city = $this->input->post('header_city');
+		$data['offers'] = $this->Ads_model->get_offers_by_term($term,$category,$city);
+		$this->load->view('ads/search' , $data);
 
 	}
 

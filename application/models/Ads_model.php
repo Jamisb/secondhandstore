@@ -96,7 +96,36 @@ class Ads_model extends CI_Model {
     public function get_offers_by_category($category){
         $this->db->select('*');
         $this->db->from('ads');
+        $this->db->order_by("created_item", "desc");
         $this->db->where(array('category'=>$category));  
+        $offers = $this->db->get();
+        return $offers->result();
+    }
+// Listing offers by city
+    public function get_offers_by_city($city){
+        $this->db->select('*');
+        $this->db->from('ads');
+        $this->db->order_by("created_item", "desc");
+        $this->db->where(array('city'=>$city));  
+        $offers = $this->db->get();
+        return $offers->result();
+    }
+// Listing offers from searching on the search bar
+
+    public function get_offers_by_term($term,$category,$city){
+        $this->db->select('*');
+        $this->db->from('ads');
+        $this->db->order_by("created_item", "desc");
+        if($term != null){
+            $this->db->like('title',$term);
+        }
+        if($category != null){
+            $this->db->where('category',$category);
+        }
+        if($city != null){
+            $this->db->where('city',$city);
+        }
+        
         $offers = $this->db->get();
         return $offers->result();
     }
