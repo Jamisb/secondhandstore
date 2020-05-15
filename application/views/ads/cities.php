@@ -10,7 +10,7 @@
     <div class="row my-5 mx-auto">
         <div class="card col-md-10 mx-left rounded shadow-sm bg-white">
             <div class="card-body">
-                <h3 class="card-title text-success"><?php echo count($offers);?> ads: <?php echo $this->uri->segment(3);?></h3>
+                <h3 class="card-title text-success">Ads found: <?php echo count($offers);?> <small class="text-black-50"> <?php echo $this->uri->segment(3);?></small></h3>
                 <hr class="border-black-50">
                 <!-- <div class="row mx-auto"> -->
                 <?foreach ($offers as $offer):?>

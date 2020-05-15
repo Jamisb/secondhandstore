@@ -98,7 +98,7 @@
     </div>   
 
                                                 <!-- CAROUSSEL -->
-    <div class=" text-success text-center"> 
+    <!-- <div class=" text-success text-center"> 
         <h3>Top categories</h3>
     </div>
     <hr>
@@ -147,7 +147,7 @@
             <span class="carousel-control-next-icon"  aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-    </div>
+    </div> -->
         
 </div>
                                         <!-- Footer -->
