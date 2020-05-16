@@ -78,12 +78,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
---
--- Indexes for dumped tables
---
-
---
 -- Indexes for table `ads`
 --
 ALTER TABLE `ads`
