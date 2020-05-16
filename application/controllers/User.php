@@ -21,7 +21,7 @@ class User extends CI_Controller {
 		}else{
 
 			$this->User_model->register_user();
-			$this->session->set_flashdata('success','Account dreated');
+			$this->session->set_flashdata('success','Account Created');
 			redirect(site_url());
 
 		}
