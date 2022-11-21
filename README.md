@@ -1,11 +1,18 @@
-# School project
-Advertisement web application where you can create posts such as selling items or jobs offers. 
+# Ecommerce APP - SECONDHAND
+Advertisement web application where you can create posts such as selling items or jobs offers.
+
+<img src ="https://sun9-87.userapi.com/impg/93UNid_3k10Mo5UzotKYwKejDnixx0vdAVkm4w/mnhrAsHhEws.jpg?size=2490x1254&quality=95&sign=af1535fddfb556c3c0baa1df64360fbe&type=album">
+
 # Video demonstration
 https://drive.google.com/file/d/1KsCUB_kP1VxtWr3NBaTFSoXFZMtRzSjY/view?usp=sharing
-# Tools used
-App based on Codeigniter famework V3 where it uses mainly PHP. 
-HTML5 and CSS3.
-Bootstrap framework which is a library for CSS.
+
+# Technologies
+- Codeigniter famework V3.
+- PHP 5.0.2
+- MYSQL 
+- HTML5 and CSS3.
+- Bootstrap framework which is a library for CSS.
+
 # Database
 -- phpMyAdmin SQL Dump
 -- version 5.0.2
